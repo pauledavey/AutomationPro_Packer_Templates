@@ -3,42 +3,40 @@
     {
         "type": "vsphere-iso",
   
-        "vcenter_server": "{{user `vsphere-server`}}",
-        "username": "{{user `vsphere-user`}}",
+        "vcenter_server": "{{user `vsphere-vcenter`}}",
+        "username": "{{user `vsphere-username`}}",
         "password": "{{user `vsphere-password`}}",
         "insecure_connection": "true",
   
         "datacenter": "{{user `vsphere-datacenter`}}",
         "cluster": "{{user `vsphere-cluster`}}",
         "datastore": "{{user `vsphere-datastore`}}",
-        "folder": "{{user `vsphere-folder`}}",
-  
+        
         "communicator": "winrm",
-        "winrm_username": "Administrator",
-        "winrm_password": "{{user `winadmin-password`}}",
+        "winrm_username": "{ {user `template_winrm_username`}}",
+        "winrm_password": "{{user `template_winrm_password`}}",
         "winrm_timeout": "1h30m",
   
         "convert_to_template": "true",
 
-        "vm_name": "{{user `vm-name`}}",
+        "vm_name": "Windows2019_Template",
         "guest_os_type": "windows9Server64Guest",
   
-        "CPUs": "{{user `vm-cpu-num`}}",
-        "RAM": "{{user `vm-mem-size`}}",
+        "CPUs": "{{user `template_windows_vm_cpu_num`}}",
+        "RAM": "{{user `template_windows_vm_mem_size`}}",
         "RAM_reserve_all": true,
         "firmware": "bios",
   
         "storage": [
           {
-            "disk_size": "{{user `os-disk-size`}}",
-            "disk_thin_provisioned": "{{user `disk-thin-provision`}}"
+            "disk_size": "{{user `template_windows_os_disk_size`}}"
           }
         ],
         "disk_controller_type": "lsilogic-sas",
           
         "network_adapters": [
           {
-            "network": "{{user `vsphere-network`}}",
+            "network": "{{user `template_windows_vsphere_network`}}",
             "network_card": "vmxnet3"
           }
         ],
