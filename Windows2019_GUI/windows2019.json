@@ -65,20 +65,5 @@
       "type": "windows-shell",
       "inline": ["ipconfig /all"]
     }
-  ],
-  "variables": {
-    "vcenter_server": "",
-    "username": "",
-	"password": "",
-	"vsphere_datacenter": "",
-	"cluster": "",
-	"vsphere_datastore": "",
-	"template_winrm_username": "",
-	"template_winrm_password": "",
-	"template_windows_vm_cpu_num": "",
-	"template_windows_vm_mem_size": "",
-	"template_windows_os_disk_size": "",
-	"template_windows_vsphere_network": "",
-	"cd_path": ""
-  }
+  ]
 }
