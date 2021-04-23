@@ -79,6 +79,6 @@
 	"template_windows_vm_mem_size": "",
 	"template_windows_os_disk_size": "",
 	"template_windows_vsphere_network": "",
-	"cd_path": "",
+	"cd_path": ""
   }
 }
