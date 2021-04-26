@@ -3,7 +3,7 @@
     {
         "type": "vsphere-iso",
   
-        "vcenter_server": "{{user `vsphere-vcenter`}}",
+        "vcenter_server": "{{user `vcenter_server`}}",
         "username": "{{user `vsphere-username`}}",
         "password": "{{user `vsphere-password`}}",
         "insecure_connection": "true",
