@@ -4,8 +4,8 @@
         "type": "vsphere-iso",
   
         "vcenter_server": "{{user `vcenter_server`}}",
-        "username": "{{user `vsphere-username`}}",
-        "password": "{{user `vsphere-password`}}",
+        "username": "{{user `username`}}",
+        "password": "{{user `password`}}",
         "insecure_connection": "true",
   
         "datacenter": "{{user `vsphere-datacenter`}}",
