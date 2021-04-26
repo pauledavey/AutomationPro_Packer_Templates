@@ -29,7 +29,7 @@
   
         "storage": [
           {
-            "disk_size": "{{user `template_windows_os_disk_size`}}"
+            "disk_size": "40980"
           }
         ],
         "disk_controller_type": "lsilogic-sas",
